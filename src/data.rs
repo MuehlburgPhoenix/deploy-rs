@@ -49,6 +49,7 @@ pub struct NodeSettings {
         rename(deserialize = "profilesOrder")
     )]
     pub profiles_order: Vec<String>,
+    pub tags: Vec<String>,
 }
 
 #[derive(Deserialize, Debug, Clone)]
