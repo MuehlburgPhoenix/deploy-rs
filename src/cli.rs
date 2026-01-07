@@ -33,6 +33,9 @@ pub struct Opts {
     /// Treat targets as files instead of flakes
     #[clap(short, long)]
     file: Option<String>,
+    /// A list of tags to filter targets with
+    #[arg(long, group = "deploy", num_args = 1..)]
+    tags: Option<Vec<String>>,
     /// Check signatures when using `nix copy`
     #[arg(short, long)]
     checksigs: bool,
